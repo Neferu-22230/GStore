@@ -1,0 +1,24 @@
+.card-img-top {
+    align-self: center;
+    object-fit: contain;
+    padding: 20px;
+    height: 200px;
+}
+
+.card-img-top:hover {
+    transform: scale(1.2);
+    transition-duration: 1.4s;
+    z-index: 100;
+}
+
+.table > :not(caption) > * > * {
+    background-color: transparent;
+} 
+
+table.dataTable tbody tr:hover {
+    background-color: rgb(214, 234, 235) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

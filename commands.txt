@@ -1,0 +1,57 @@
+git config --global user.name Neferu-22230
+git config --global user.email luizotavios@gmail.com
+
+dotnet new sln --name GStore
+dotnet new mvc -o GStore
+dotnet sln add GStore\GStore.csproj
+
+cd GStore
+
+dotnet watch run
+
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
+dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+
+Criar a camada de dados (criar as classes na models)
+    Categoria
+    Produto
+    ProdutoFoto
+    Usuario
+
+Criar um contexto na pasta Data
+
+Configurar a ConnectionString no appsettings.json
+
+Configurar os serviços de Contexto e Identity no Program.cs
+
+Executar o Xampp e MySql
+
+Abrir o Terminal:  Ctrl '
+    cd GStore
+    dotnet watch run
+
+
+dotnet codegenerator
+
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.1
+
+
+dotnet aspnet-codegenerator controller -name CategoriasController --model Categoria --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+dotnet aspnet-codegenerator controller -name ProdutosController --model Produto --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+
+
+
+dotnet add package MailKit --version 4.11.0
+dotnet add package MimeKit --version 4.11.0
+
+
+
+
+
+dotnet add package Quartz.Extensions.Hosting
+
